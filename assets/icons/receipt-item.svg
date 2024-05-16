@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.5" height="22.19" viewBox="0 0 21.5 22.19">
+  <g id="receipt-item" transform="translate(-1.25 -1.25)">
+    <path id="Path_36308" data-name="Path 36308" d="M22,6V8.42A2.4,2.4,0,0,1,19.42,11H16V4.01A2.019,2.019,0,0,1,18.02,2,3.995,3.995,0,0,1,22,6Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_36309" data-name="Path 36309" d="M2,7V21a1,1,0,0,0,1.6.8l1.71-1.28a1.007,1.007,0,0,1,1.32.1l1.66,1.67a1.008,1.008,0,0,0,1.42,0l1.68-1.68a.991.991,0,0,1,1.3-.09L14.4,21.8A1,1,0,0,0,16,21V4a2.006,2.006,0,0,1,2-2H6C3,2,2,3.79,2,6Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_36310" data-name="Path 36310" d="M9,13.01h3" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_36311" data-name="Path 36311" d="M9,9.01h3" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_36312" data-name="Path 36312" d="M6,13H6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_36313" data-name="Path 36313" d="M6,9H6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>
