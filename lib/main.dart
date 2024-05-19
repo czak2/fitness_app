@@ -67,23 +67,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
             useMaterial3: true,
           ),
-          // initialRoute: "/",
-          // routes: {"/": (context) => Splash()},
-          home: Splash()
-          // BlocBuilder<PhoneAuthCubit, PhoneAuthState>(
-          //   buildWhen: (previous, current) {
-          //     return previous is PhoneAuthInitial;
-          //   },
-          //   builder: (context, state) {
-          //     if (state is AuthLoggedInState) {
-          //       return HomeScreen();
-          //     }
-          //     return SplashScreen();
-          //   },
-
-          //      ),
-
-          ),
+          home: Splash()),
     );
   }
 }
