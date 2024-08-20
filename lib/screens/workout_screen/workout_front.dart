@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitness_app/screens/workout_screen/charts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import '../../widgets/drawer.dart';
 import 'add_workout_details_page.dart';
 
 class AddWorkoutScreen extends StatefulWidget {
@@ -48,6 +50,41 @@ class _AddWorkoutScreenState extends State<AddWorkoutScreen> {
                 Icons.add,
                 size: 30,
               ),
+            ),
+          ),
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Color.fromRGBO(30, 32, 33, 1),
+            ),
+            margin: EdgeInsets.only(right: 15, bottom: 4),
+            child: InkWell(
+                onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ChartScreen(),
+                      ),
+                    ),
+                child: SvgPicture.asset(
+                  "assets/images/status-up.svg",
+                  fit: BoxFit.none,
+                )),
+          ),
+        ],
+      ),
+      drawer: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                borderRadius:
+                    BorderRadius.only(bottomRight: Radius.circular(100))),
+            height: MediaQuery.of(context).size.height / 1.35,
+            child: Drawer(
+              child: DrawerWidget(),
+              backgroundColor: const Color.fromARGB(255, 33, 86, 243),
             ),
           ),
         ],
@@ -125,6 +162,9 @@ class _AddWorkoutScreenState extends State<AddWorkoutScreen> {
                               ? MainAxisAlignment.center
                               : MainAxisAlignment.start,
                           children: [
+                            SizedBox(
+                              height: 15,
+                            ),
                             Text(
                               formattedDate,
                               style: GoogleFonts.oswald(

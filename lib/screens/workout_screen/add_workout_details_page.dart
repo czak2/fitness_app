@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../widgets/custom_button.dart';
+import '../../widgets/drawer.dart';
 
 class AddWorkoutDetailsPage extends StatefulWidget {
   const AddWorkoutDetailsPage({super.key});
@@ -92,9 +93,75 @@ class _AddWorkoutDetailsPageState extends State<AddWorkoutDetailsPage> {
         backgroundColor: Colors.black,
         body: SingleChildScrollView(
           child: Container(
+            margin: EdgeInsets.all(20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 20),
+                SizedBox(
+                  height: 80,
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: weightController,
+                    decoration: InputDecoration(
+                      counterText: "",
+                      hintText: "Weight",
+                      hintStyle: GoogleFonts.oswald(
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromRGBO(27, 88, 231, 1)),
+                      filled: true,
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(27, 88, 231, 1))),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(27, 88, 231, 1)),
+                      ),
+                      fillColor: Colors.white,
+                      labelStyle: const TextStyle(
+                          color: Color.fromRGBO(27, 88, 231, 1)),
+                      border: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(27, 88, 231, 1)),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 80,
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    controller: caloriesController,
+                    decoration: InputDecoration(
+                      counterText: "",
+                      hintText: "Calories",
+                      hintStyle: GoogleFonts.oswald(
+                          fontWeight: FontWeight.w600,
+                          color: Color.fromRGBO(27, 88, 231, 1)),
+                      filled: true,
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(27, 88, 231, 1))),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(15),
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(27, 88, 231, 1)),
+                      ),
+                      fillColor: Colors.white,
+                      labelStyle: const TextStyle(
+                          color: Color.fromRGBO(27, 88, 231, 1)),
+                      border: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(27, 88, 231, 1)),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                  ),
+                ),
                 Container(
                   padding: EdgeInsets.only(left: 11, top: 5),
                   decoration: BoxDecoration(
@@ -105,7 +172,7 @@ class _AddWorkoutDetailsPageState extends State<AddWorkoutDetailsPage> {
                   width: double.infinity,
                   child: DropdownButton(
                     icon: Padding(
-                      padding: const EdgeInsets.only(left: 270),
+                      padding: const EdgeInsets.only(left: 255),
                       child: SvgPicture.asset(
                         "assets/icons/arrow-right.svg",
                         color: Color.fromRGBO(28, 28, 28, 1),
@@ -150,66 +217,21 @@ class _AddWorkoutDetailsPageState extends State<AddWorkoutDetailsPage> {
                           fontWeight: FontWeight.w600,
                           color: Color.fromRGBO(27, 88, 231, 1)),
                       filled: true,
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(
+                              color: Color.fromRGBO(27, 88, 231, 1))),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
-                        borderSide: const BorderSide(color: Colors.blue),
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(27, 88, 231, 1)),
                       ),
                       fillColor: Colors.white,
-                      labelStyle: const TextStyle(color: Colors.blue),
-                      border: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.blue),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                SizedBox(
-                  height: 80,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    controller: weightController,
-                    decoration: InputDecoration(
-                      counterText: "",
-                      hintText: "Weight",
-                      hintStyle: GoogleFonts.oswald(
-                          fontWeight: FontWeight.w600,
+                      labelStyle: const TextStyle(
                           color: Color.fromRGBO(27, 88, 231, 1)),
-                      filled: true,
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: const BorderSide(color: Colors.blue),
-                      ),
-                      fillColor: Colors.white,
-                      labelStyle: const TextStyle(color: Colors.blue),
                       border: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.blue),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                SizedBox(
-                  height: 80,
-                  child: TextFormField(
-                    keyboardType: TextInputType.number,
-                    controller: caloriesController,
-                    decoration: InputDecoration(
-                      counterText: "",
-                      hintText: "Calories",
-                      hintStyle: GoogleFonts.oswald(
-                          fontWeight: FontWeight.w600,
-                          color: Color.fromRGBO(27, 88, 231, 1)),
-                      filled: true,
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: const BorderSide(color: Colors.blue),
-                      ),
-                      fillColor: Colors.white,
-                      labelStyle: const TextStyle(color: Colors.blue),
-                      border: OutlineInputBorder(
-                        borderSide: const BorderSide(color: Colors.blue),
+                        borderSide: const BorderSide(
+                            color: Color.fromRGBO(27, 88, 231, 1)),
                         borderRadius: BorderRadius.circular(15),
                       ),
                     ),
@@ -235,7 +257,7 @@ class _AddWorkoutDetailsPageState extends State<AddWorkoutDetailsPage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 50),
                 isLoading
                     ? Center(
                         child: CircularProgressIndicator(
@@ -243,7 +265,7 @@ class _AddWorkoutDetailsPageState extends State<AddWorkoutDetailsPage> {
                         ),
                       )
                     : CustomButon(
-                        title: "Save",
+                        title: "SAVE",
                         onPressed: saveWorkouts,
                       ),
               ],

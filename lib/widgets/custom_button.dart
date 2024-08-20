@@ -39,10 +39,14 @@ class RPSCustomPainter extends CustomPainter {
 
     Paint paint_fill_0 = Paint()
       ..color = Colors.blue
-      ..shader = RadialGradient(colors: [
-        Color.fromRGBO(27, 88, 231, 1),
-        Color.fromRGBO(16, 71, 199, 1),
-      ]).createShader(Rect.fromLTRB(0, 0, 300, 300))
+      ..shader = LinearGradient(
+        colors: [
+          Color.fromRGBO(27, 88, 231, 1),
+          Color.fromRGBO(16, 71, 199, 1),
+        ],
+        begin: Alignment.bottomLeft,
+        end: Alignment.bottomRight,
+      ).createShader(Rect.fromLTRB(0, 0, size.width, size.height))
       ..style = PaintingStyle.fill
       ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt

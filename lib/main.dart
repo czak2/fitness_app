@@ -4,12 +4,15 @@ import 'package:fitness_app/chat/firebase_provider.dart';
 import 'package:fitness_app/provider/favourite_video.dart';
 import 'package:fitness_app/provider/my_program_provider.dart';
 import 'package:fitness_app/provider/payment_history.dart';
+import 'package:fitness_app/provider/verify.dart';
 import 'package:fitness_app/screens/notification_screen/notification_screen.dart';
 import 'package:fitness_app/screens/setting_screen/settingpage.dart';
 
 import 'package:fitness_app/screens/splash_screen/splash.dart';
 import 'package:fitness_app/screens/profiles_screen/update_profile.dart';
 import 'package:fitness_app/screens/authen_screen/phone_num_auth.dart';
+import 'package:fitness_app/screens/workout_screen/add_workout_details_page.dart';
+import 'package:fitness_app/screens/workout_screen/charts.dart';
 
 import 'package:flutter/material.dart';
 
@@ -48,6 +51,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (context) => VerifyPhoneProvider(),
+        ),
         ChangeNotifierProvider(
           create: (context) => FavoriteVideosModel(),
         ),

@@ -4,9 +4,12 @@ import 'package:fitness_app/chat/firebase_provider.dart';
 import 'package:fitness_app/screens/favourite_screen/favorite_screen.dart';
 import 'package:fitness_app/screens/workout_purchase_screen/my_program.dart';
 import 'package:fitness_app/screens/authen_screen/phone_num_auth.dart';
+import 'package:fitness_app/screens/workout_screen/workout_front.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
+import '../screens/workout_screen/add_workout_details_page.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({super.key});
@@ -142,7 +145,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               height: 15,
             ),
             Container(
-              child: const Row(
+              child: Row(
                 children: [
                   Icon(
                     Icons.health_and_safety,
@@ -151,9 +154,18 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    "Health Regime",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AddWorkoutScreen(),
+                          ));
+                    },
+                    child: Text(
+                      "Health Regime",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
                   )
                 ],
               ),

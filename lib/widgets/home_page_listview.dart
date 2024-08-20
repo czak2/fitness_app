@@ -226,7 +226,25 @@ class _HomeListViewState extends State<HomeListView> {
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20)),
                               // Text("Hello World",
+                              //
                               //     style: TextStyle(color: Colors.white))
+                              Spacer(),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 5, horizontal: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.orange,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Text(
+                                  "\$15.99",
+                                  style: GoogleFonts.oswald(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                           SizedBox(

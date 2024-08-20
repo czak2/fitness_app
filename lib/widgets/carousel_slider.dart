@@ -26,7 +26,7 @@ class _CarouselSliderCardState extends State<CarouselSliderCard> {
         options: CarouselOptions(
             enlargeCenterPage: true,
             scrollPhysics: ClampingScrollPhysics(),
-            aspectRatio: 1,
+            aspectRatio: 1.18,
             enableInfiniteScroll: false));
   }
 
